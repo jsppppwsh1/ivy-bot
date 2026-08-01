@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import os
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 
 load_dotenv()
 
@@ -31,4 +32,5 @@ async def on_message(message):
     await bot.process_commands(message)
 
 
+keep_alive()
 bot.run(TOKEN)
